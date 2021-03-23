@@ -38,7 +38,6 @@ export default {
   },
   countries: {
     DE: "Deutschland",
-    US: "United States",
   },
   formats: {
     number: {
@@ -49,21 +48,8 @@ export default {
           currencyDisplay: "symbol",
         },
       },
-      US: {
-        currency: {
-          style: "currency",
-          currency: "USD",
-        },
-      },
     },
     datetime: {
-      US: {
-        short: {
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-        },
-      },
       DE: {
         short: {
           year: "numeric",
@@ -78,44 +64,36 @@ export default {
   },
   facetSearches: [
     {
-      name: "size",
-      type: "text",
+      name: "quantity",
+      type: "number",
       label: {
-        it: "Size",
-        de: "Größe",
-        en: "Size",
+        de: "Menge (in Gramm)",
+        en: "Quantity (in grams)",
       },
     },
     {
-      name: "color",
+      name: "rice-type",
       type: "lnum",
-      component: "colors",
       label: {
-        de: "Farbe",
-        it: "Color",
-        en: "Color",
+        de: "Reisart",
+        en: "Rice type",
       },
     },
     {
-      name: "designer",
-      type: "enum",
-      component: "designer",
+      name: "spice-type",
+      type: "lnum",
       label: {
-        it: "Designer",
-        de: "Designer",
-        en: "Designer",
+        de: "Gewürz-Typ",
+        en: "Spice type",
       },
-    },
+    }
   ],
   detailAttributes: [
-    "designer",
-    "colorFreeDefinition",
-    "size",
-    "style",
-    "gender",
-    "articleNumberManufacturer",
+    "rice-type",
+    "quantity",
+    "spice-type"
   ],
-  variantSelector: ["color", "size"],
-  variantInProductName: ["size"],
+  variantSelector: ["rice-type", "quantity", "spice-type"],
+  // variantInProductName: ["rice-type", "spice-type"],
   ...localConfig
 };
