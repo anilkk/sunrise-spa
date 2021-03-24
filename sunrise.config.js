@@ -95,5 +95,6 @@ export default {
   ],
   variantSelector: ["rice-type", "quantity", "spice-type"],
   // variantInProductName: ["rice-type", "spice-type"],
+  variantInProductName: ["rice-type"],
   ...localConfig
 };
